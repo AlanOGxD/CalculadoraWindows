@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button btnPorcentaje, btnRaiz, btnPotencia, btnDivisionx, btnCE, btnC, btnBorrar, btnDivision,btnMC, btnM,
     btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0, btnMultiplicacion, btnResta, btnSuma, btnPunto, btnIgual, btnMmas, btnMmenos, btnMS, btnMR;
 
-    byte botonPulsado=0;
+    byte botonUsado =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double num1, num2;
         if (click==R.id.btn_mas){
 
-            botonPulsado=1;
+            botonUsado =1;
             if (lectura.getText().toString().equals("")) {
                 num2 = 0;
             } else {
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (click == R.id.btn_menos) {
-            botonPulsado=2;
+            botonUsado =2;
             if (lectura.getText().toString().equals("")) {
                 num2 = 0;
             } else {
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (click == R.id.btn_multiplicacion) {
-            botonPulsado=3;
+            botonUsado =3;
             if(lectura.getText().toString().equals("")) {
                 num1=1;
             }else {
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (click == R.id.btn_division) {
-            botonPulsado=4;
+            botonUsado =4;
             if(lectura.getText().toString().equals("")) {
                 double x=Double.parseDouble(entrada.getText().toString())*Double.parseDouble(entrada.getText().toString());
                 lectura.setText(String.valueOf(x));
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(click==R.id.btn_porcentaje){
-            botonPulsado=5;
+            botonUsado =5;
             if(lectura.getText().toString().equals("")){
                 lectura.setText(entrada.getText().toString());
                 entrada.setText("");
@@ -259,21 +259,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(click==R.id.btn_igual){
-            if(botonPulsado==1) {
+            if(botonUsado ==1) {
                 double n1=Double.parseDouble(lectura.getText().toString());
                 double n2=Double.parseDouble(entrada.getText().toString());
                 double res=n1+n2;
                 entrada.setText(String.valueOf(res));
                 lectura.setText("");
             }
-            if(botonPulsado==2) {
+            if(botonUsado ==2) {
                 double n1=Double.parseDouble(lectura.getText().toString());
                 double n2=Double.parseDouble(entrada.getText().toString());
                 double res=n1-n2;
                 entrada.setText(String.valueOf(res));
                 lectura.setText("");
             }
-            if(botonPulsado==3) {
+            if(botonUsado ==3) {
                 double n1=Double.parseDouble(lectura.getText().toString());
                 double n2=Double.parseDouble(entrada.getText().toString());
                 double res=n1*n2;
@@ -281,14 +281,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 lectura.setText("");
             }
 
-            if(botonPulsado==4) {
+            if(botonUsado ==4) {
                 double n1=Double.parseDouble(lectura.getText().toString());
                 double n2=Double.parseDouble(entrada.getText().toString());
                 double res=n1/n2;
                 entrada.setText(String.valueOf(res));
                 lectura.setText("");
             }
-            if(botonPulsado==5) {
+            if(botonUsado ==5) {
                 if(lectura.getText().toString().equals("")){
                     lectura.setText(entrada.getText().toString());
                     entrada.setText("");
