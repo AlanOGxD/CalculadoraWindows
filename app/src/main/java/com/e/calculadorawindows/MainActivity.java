@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 entrada.setText(texto);
             }
         }
+        
 
         double num1, num2;
         if (click==R.id.btn_mas){
